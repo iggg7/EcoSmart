@@ -53,9 +53,10 @@ class PerfilActivity : AppCompatActivity() {
                     }
                 }
 
+                // Update the list and notify the adapter
                 atitudesList.clear()
                 atitudesList.addAll(updatedList)
-                adapter.notifyDataSetChanged()
+                adapter.notifyDataSetChanged() // Use notifyDataSetChanged() here to update the entire list
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -63,7 +64,6 @@ class PerfilActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, "Erro ao carregar dados do Firebase", Toast.LENGTH_SHORT).show()
             }
         })
-
 
         addButton.setOnClickListener {
             val descricao = descricaoEditText.text.toString().trim()

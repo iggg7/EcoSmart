@@ -91,11 +91,12 @@ class AtitudesAdapter(
         atitude.id?.let {
             databaseReference.child(it).removeValue().addOnSuccessListener {
 
-                atitudesList.removeAt(position)
+                // Corrigido: remove o item da lista usando o método 'remove'
+                atitudesList.remove(atitude)
 
                 notifyItemRemoved(position)
 
-                notifyItemRangeChanged(position, atitudesList.size)
+                notifyItemRangeChanged(position, atitudesList.size - 1)
 
                 Toast.makeText(context, "Atitude removida com sucesso", Toast.LENGTH_SHORT).show()
             }.addOnFailureListener {
@@ -103,6 +104,8 @@ class AtitudesAdapter(
             }
         }
     }
+
+
 
     override fun getItemCount() = atitudesList.size
 }
