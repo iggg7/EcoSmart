@@ -1,10 +1,10 @@
-package br.com.dominiodaaplicao.ecosmart
+package br.com.dominiodaaplicao.ecosmart.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import br.com.dominiodaaplicao.ecosmart.activity.LoginActivity
+import br.com.dominiodaaplicao.ecosmart.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
