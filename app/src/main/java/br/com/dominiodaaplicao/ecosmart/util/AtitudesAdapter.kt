@@ -91,7 +91,6 @@ class AtitudesAdapter(
         atitude.id?.let {
             databaseReference.child(it).removeValue().addOnSuccessListener {
 
-                // Corrigido: remove o item da lista usando o método 'remove'
                 atitudesList.remove(atitude)
 
                 notifyItemRemoved(position)

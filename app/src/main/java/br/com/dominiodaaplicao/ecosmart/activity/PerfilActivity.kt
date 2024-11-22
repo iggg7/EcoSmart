@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -53,10 +54,9 @@ class PerfilActivity : AppCompatActivity() {
                     }
                 }
 
-                // Update the list and notify the adapter
                 atitudesList.clear()
                 atitudesList.addAll(updatedList)
-                adapter.notifyDataSetChanged() // Use notifyDataSetChanged() here to update the entire list
+                adapter.notifyDataSetChanged()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -81,6 +81,11 @@ class PerfilActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Digite uma descrição válida", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        val backButton: ImageButton = findViewById(R.id.backButton)
+        backButton.setOnClickListener {
+            onBackPressed()
         }
     }
 }
