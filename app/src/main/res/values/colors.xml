@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Alice_blue">#F0F8FF</color>
+    <color name="azul_clarinho">#97c7da</color>
+    <color name="login_text_color">#50a8b7</color>
+    <color name="cinza">#708090</color>
+</resources>
